@@ -28,4 +28,8 @@
     terminal_input serial;
     terminal_output serial;
   '';
+
+  boot.loader.grub.forceInstall = true;
+  boot.loader.grub.device = "nodev";
+  boot.loader.timeout = 10;
 }
