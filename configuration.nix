@@ -111,5 +111,11 @@
   networking.usePredictableInterfaceName = false;
   networking.useDHCP = false;
   networking.interfaces.eth0.useDHCP = true;
+
+  enviroment.systemPackages = with pkgs; [
+    inetutils
+    mtr
+    sysstat
+  ];
 }
 
