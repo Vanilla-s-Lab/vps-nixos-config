@@ -108,11 +108,11 @@
     permitRootLogin = "yes";
   };
 
-  networking.usePredictableInterfaceName = false;
+  networking.usePredictableInterfaceNames = false;
   networking.useDHCP = false;
   networking.interfaces.eth0.useDHCP = true;
 
-  enviroment.systemPackages = with pkgs; [
+  environment.systemPackages = with pkgs; [
     inetutils
     mtr
     sysstat
