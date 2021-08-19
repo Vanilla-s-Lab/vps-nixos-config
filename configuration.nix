@@ -107,5 +107,9 @@
     enable = true;
     permitRootLogin = "yes";
   };
+
+  networking.usePredictableInterfaceName = false;
+  networking.useDHCP = false;
+  networking.interfaces.eth0.useDHCP = true;
 }
 
