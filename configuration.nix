@@ -116,6 +116,8 @@
     inetutils
     mtr
     sysstat
+
+    git
   ];
 }
 
