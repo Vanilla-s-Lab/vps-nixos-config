@@ -103,6 +103,10 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "21.05"; # Did you read the comment?
 
+  users.users.root.openssh.authorizedKeys.keys = [
+    "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDAoms8qirQCt8InWouj6bMph20c22bh7qOxM7OeUiqW3fKdPU1/2MSkqmlcbvm2VM5dyXnZMUEGg6CWaF/kw2WYQzWPu10KpCATtnxqc6/BI5St5P2rEky6AXgcm1YcdxHe3dh13Oa5EK8L80t+AJ7JEYpLQy4gm/ZtDxXL0k7VEGT3pGDG3keBxnq0mvnDOiMKFQ7zSCHEsNseZj56U5l1z1JYBqrGA0yelWja3u0DrYC3BRBlcbaOxOX3UdrXZCVN6sXTQ3X38ZhEoiZ1ihDAxJ/doECKcL5GmkjGspyxr8mHEG0uI173lmH7cCYkOiyg7WVU7y2rM7MHkYVuL8yPRWy4gGdRWCjfkj40pvQeq0QAuTr5MfA/xwQXjJSBEkPdSpf60QvZOMnUFCwSSVHjvBDghKaO+x0z9GZrJzQ5lTHmyvj1NmawAh+Gkkd7kFyLmFuXAKkpuR/b+WaROcI7c6m9bfXuAVEz8XI4yrhpaINS7GhwIflzbh2hcXHfTU= neko@hydev.org"
+  ];
+
   services.openssh = {
     enable = true;
     permitRootLogin = "yes";
